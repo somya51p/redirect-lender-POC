@@ -31,7 +31,7 @@ function submitFormData() {
     const form = document.getElementById('redirectForm');
     const formData = new FormData(form);
 
-    fetch("https://dl.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true", {
+    fetch("https://my.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true", {
         method: "POST",
         body: formData,
     })
