@@ -24,15 +24,22 @@
 </form>
 
 <script>
-function redirectWithParams() {
+function submitFormData() {
     const form = document.getElementById('redirectForm');
-    const url = new URL("https://dl.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true");
+    const formData = new FormData(form);
 
-    new FormData(form).forEach((value, key) => {
-        url.searchParams.append(key, value);
-    });
-
-    window.location.href = url.toString();
+    fetch("https://dl.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true", {
+        method: "POST",
+        body: formData,
+    })
+    .then(response => {
+        if (response.redirected) {
+            window.location.href = response.url;
+        } else {
+            return response.text();
+        }
+    })
+    .catch(error => console.error("Error submitting form:", error));
 }
 </script>
     
