@@ -5,18 +5,21 @@
 </head>
 <body>
 
-<h2>Submit Loan Data to Flipkart</h2>
-<form action="https://my.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true" method="POST">
-    <label for="loanId">Loan ID:</label>
-    <input type="text" id="loanId" name="loanId" value="LOAN123456"><br><br>
+<h2>Submit Transaction Data to Flipkart</h2>
+<form action="https://dl.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true" method="POST">
+    <label for="transactionId">Transaction ID:</label>
+    <input type="text" id="transactionId" name="transactionId" value="FK2310031804VUVH101"><br><br>
+
+    <label for="fmTransactionId">FM Transaction Id:</label>
+    <input type="text" id="fmTransactionId" name="fmTransactionId" value="9eb91c82d226"><br><br>
+
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" value="1500000"><br><br>
 
     <label for="status">Status:</label>
-    <input type="text" id="status" name="status" value="APPROVED"><br><br>
+    <input type="text" id="status" name="status" value="SUCCESS"><br><br>
 
-    <label for="customerName">Customer Name:</label>
-    <input type="text" id="customerName" name="customerName" value="John Doe"><br><br>
-
-    <input type="submit" value="Submit Loan Data">
+    <input type="submit" value="Submit Data">
 </form>
 
 </body>
