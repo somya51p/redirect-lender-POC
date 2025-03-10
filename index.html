@@ -6,7 +6,9 @@
 <body>
 
 <h2>Submit Transaction Data to Flipkart</h2>
-<form id="redirectForm">
+<!-- <form id="redirectForm"> -->
+<form action="https://my.flipkart.com/rv/fpg/cfa/etb/redirect?ssr=true" method="POST">
+
     <label for="transactionId">Transaction ID:</label>
     <input type="text" id="transactionId" name="transactionId" value="FK2310031804VUVH101"><br><br>
 
@@ -19,9 +21,9 @@
     <label for="status">Status:</label>
     <input type="text" id="status" name="status" value="SUCCESS"><br><br>
 
-<!--     <input type="submit" value="Submit Data"> -->
+    <input type="submit" value="Submit Data">
 <!--     <button type="button" onclick="redirectWithParams()">Submit Data</button> -->
-    <a href="#" onclick="submitFormData()">SUBMIT</a><br><br>
+<!--     <a href="#" onclick="submitFormData()">SUBMIT</a><br><br> -->
 </form>
 
 <script>
